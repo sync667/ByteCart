@@ -13,11 +13,11 @@ import code.husky.Database;
 
 /**
  * Connects to and uses a MySQL database
- * 
+ *
  * @author -_Husky_-
  * @author tips48
  */
-public class MySQL extends Database {
+public class MySQL extends Database{
     private final String user;
     private final String database;
     private final String password;
@@ -28,19 +28,13 @@ public class MySQL extends Database {
 
     /**
      * Creates a new MySQL instance
-     * 
-     * @param plugin
-     *            Plugin instance
-     * @param hostname
-     *            Name of the host
-     * @param port
-     *            Port number
-     * @param database
-     *            Database name
-     * @param username
-     *            Username
-     * @param password
-     *            Password
+     *
+     * @param plugin   Plugin instance
+     * @param hostname Name of the host
+     * @param port     Port number
+     * @param database Database name
+     * @param username Username
+     * @param password Password
      */
     public MySQL(Plugin plugin, String hostname, String port, String database, String username, String password) {
         super(plugin);
@@ -56,7 +50,9 @@ public class MySQL extends Database {
     public Connection openConnection() {
         try {
             Class.forName("com.mysql.jdbc.Driver");
-            connection = DriverManager.getConnection("jdbc:mysql://" + this.hostname + ":" + this.port + "/" + this.database, this.user, this.password);
+            connection = DriverManager
+                    .getConnection("jdbc:mysql://" + this.hostname + ":" + this.port + "/" + this.database, this.user,
+                            this.password);
         } catch (SQLException e) {
             plugin.getLogger().log(Level.SEVERE, "Could not connect to MySQL server! because: " + e.getMessage());
         } catch (ClassNotFoundException e) {

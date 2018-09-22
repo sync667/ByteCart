@@ -1,8 +1,7 @@
-name: ByteCart
-author: catageek
-website: https://www.spigotmc.org/resources/bytecart.39493/
+name: CraftlandiaRails
+author: catageek, sync667
 description: An automatic transit system
-main: com.github.catageek.ByteCart.ByteCart
+main: com.github.sync667.CraftlandiaRails.CraftlandiaRails
 version: 3.1.3
 database: false
 softdepend: [dynmap]
@@ -231,19 +230,19 @@ permissions:
 
 commands:
     mego:
-        description: set ByteCart destination address in your inventory
+        description: set CraftlandiaRails destination address in your inventory
         usage: "Usage : /<command> address [train], where address is formatted as a.b.c"
         permission: bytecart.mego
         permission-message: You don't have permission <permission>
 
     sendto:
-        description: set ByteCart destination address in a storage cart inventory
+        description: set CraftlandiaRails destination address in a storage cart inventory
         usage: "Usage : /<command> address [train], where address is formatted as a.b.c"
         permission: bytecart.sendto
         permission-message: You don't have permission <permission>
 
     bcupdater:
-        description: set a cart as Updater for ByteCart
+        description: set a cart as Updater for CraftlandiaRails
         usage: |
            Usage : /<command> (region|local) n [new]
                      /<command> backbone

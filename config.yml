@@ -1,4 +1,4 @@
-# config file for ByteCart bukkit plugin.
+# config file for CraftlandiaRails bukkit plugin.
 
 # set true if you want a lot debug messages on the console
 debug: false
@@ -42,7 +42,7 @@ FixBroken18: false
 oldBC9000behaviour: false
 
 # Name to use as author of ticket book
-author: ByteCart
+author: CraftlandiaRails
 
 # Title of ticket book
 title: Ticket to
@@ -51,7 +51,7 @@ title: Ticket to
 dynmap: true
 
 # Name of Dynmap layer
-dynmap.layer: ByteCart
+dynmap.layer: CraftlandiaRails
 
 # timeout of updaters in minutes
 # set to 0 for no timeout

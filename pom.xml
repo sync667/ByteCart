@@ -1,9 +1,9 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
-	<groupId>com.github.catageek</groupId>
-	<artifactId>ByteCart</artifactId>
-	<name>ByteCart</name>
+	<groupId>com.github.sync667</groupId>
+	<artifactId>CraftlandiaRails</artifactId>
+	<name>CraftlandiaRails</name>
 
 	<repositories>
 		<repository>
@@ -51,7 +51,7 @@
 				<plugin>
 					<groupId>org.apache.maven.plugins</groupId>
 					<artifactId>maven-compiler-plugin</artifactId>
-					<version>3.0</version>
+					<version>3.6.1</version>
 					<configuration>
 						<source>1.8</source>
 						<target>1.8</target>
@@ -60,7 +60,7 @@
 				<plugin>
 					<groupId>org.apache.maven.plugins</groupId>
 					<artifactId>maven-site-plugin</artifactId>
-					<version>3.2</version>
+					<version>3.3</version>
 					<dependencies>
 						<dependency><!-- add support for ssh/scp -->
 							<groupId>org.apache.maven.wagon</groupId>
@@ -72,7 +72,7 @@
 				<plugin>
 					<groupId>org.apache.maven.plugins</groupId>
 					<artifactId>maven-shade-plugin</artifactId>
-					<version>2.1</version>
+					<version>2.4.2</version>
 					<configuration>
 						<artifactSet>
 							<includes>
@@ -125,8 +125,8 @@
 			</resource>
 			<resource>
 				<filtering>false</filtering>
-				<targetPath>com/github/catageek/ByteCart/plugins/resources</targetPath>							
-				<directory>${basedir}/src/com/github/catageek/ByteCart/plugins/resources</directory>
+				<targetPath>com/github/sync667/CraftlandiaRails/plugins/resources</targetPath>
+				<directory>src/com/github/sync667/CraftlandiaRails/plugins/resources</directory>
 				<includes>
 					<include>bc2.png</include>
 					<include>updater.png</include>
@@ -138,7 +138,6 @@
 	</build>
 
 	<url>http://dev.bukkit.org/server-mods/bytecart/</url>
-	<description>ByteCart is a bukkit plugin that allows to create a railed network using principle of Internet.</description>
 
 	<scm>
 		<connection>scm:git:git://github.com/catageek/ByteCart.git</connection>
@@ -146,10 +145,6 @@
 		<url>https://github.com/catageek/ByteCart</url>
 	</scm>
 
-	<issueManagement>
-		<url>https://github.com/catageek/ByteCart/issues</url>
-		<system>gitHub issues</system>
-	</issueManagement>
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<bukkit.version>1.12.1-R0.1-SNAPSHOT</bukkit.version>

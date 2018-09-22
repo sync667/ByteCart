@@ -13,21 +13,19 @@ import code.husky.Database;
 
 /**
  * Connects to and uses a SQLite database
- * 
+ *
  * @author tips48
  */
-public class SQLite extends Database {
+public class SQLite extends Database{
     private final String dbLocation;
 
     private Connection connection;
 
     /**
      * Creates a new SQLite instance
-     * 
-     * @param plugin
-     *            Plugin instance
-     * @param dbLocation
-     *            Location of the Database (Must end in .db)
+     *
+     * @param plugin     Plugin instance
+     * @param dbLocation Location of the Database (Must end in .db)
      */
     public SQLite(Plugin plugin, String dbLocation) {
         super(plugin);
@@ -38,7 +36,7 @@ public class SQLite extends Database {
     @Override
     public Connection openConnection() {
         File file = new File(dbLocation);
-        if (!(file.exists())) {
+        if (! (file.exists())) {
             try {
                 file.createNewFile();
             } catch (IOException e) {
@@ -47,7 +45,8 @@ public class SQLite extends Database {
         }
         try {
             Class.forName("org.sqlite.JDBC");
-            connection = DriverManager.getConnection("jdbc:sqlite:" + plugin.getDataFolder().toPath().toString() + "/" + dbLocation);
+            connection = DriverManager
+                    .getConnection("jdbc:sqlite:" + plugin.getDataFolder().toPath().toString() + "/" + dbLocation);
         } catch (SQLException e) {
             plugin.getLogger().log(Level.SEVERE, "Could not connect to SQLite server! because: " + e.getMessage());
         } catch (ClassNotFoundException e) {
@@ -59,7 +58,7 @@ public class SQLite extends Database {
     @Override
     public boolean checkConnection() {
         try {
-            return !(connection.isClosed());
+            return ! (connection.isClosed());
         } catch (SQLException e) {
             e.printStackTrace();
             return false;
