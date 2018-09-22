@@ -95,7 +95,7 @@ abstract public class AbstractIC implements IC{
     // This function checks if we have a CraftlandiaRails sign at this location
     static public final boolean checkEligibility(Block b) {
 
-        if (b.getType() != Material.SIGN_POST && b.getType() != Material.WALL_SIGN) {
+        if (b.getType() != Material.SIGN && b.getType() != Material.WALL_SIGN) {
             return false;
         }
 

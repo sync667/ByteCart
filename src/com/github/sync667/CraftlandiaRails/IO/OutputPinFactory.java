@@ -21,7 +21,10 @@ final public class OutputPinFactory{
             return new ComponentLever(block);
         }
 
-        if (block.getType().equals(Material.STONE_BUTTON) || block.getType().equals(Material.WOOD_BUTTON)) {
+        if (block.getType().equals(Material.STONE_BUTTON) || block.getType().equals(Material.BIRCH_BUTTON) ||
+                block.getType().equals(Material.ACACIA_BUTTON) || block.getType().equals(Material.DARK_OAK_BUTTON) ||
+                block.getType().equals(Material.JUNGLE_BUTTON) || block.getType().equals(Material.OAK_BUTTON) ||
+                block.getType().equals(Material.SPRUCE_BUTTON)) {
             return new ComponentButton(block);
         }
 

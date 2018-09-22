@@ -1,8 +1,6 @@
 package com.github.sync667.CraftlandiaRails.AddressLayer;
 
-import java.io.IOException;
-import java.util.ListIterator;
-
+import com.github.sync667.CraftlandiaRails.AddressLayer.AddressBook.Parameter;
 import com.github.sync667.CraftlandiaRails.CraftlandiaRails;
 import com.github.sync667.CraftlandiaRails.FileStorage.BookFile;
 import com.github.sync667.CraftlandiaRails.FileStorage.BookProperties;
@@ -15,7 +13,8 @@ import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.PlayerInventory;
 import org.bukkit.inventory.meta.BookMeta;
 
-import com.github.sync667.CraftlandiaRails.AddressLayer.AddressBook.Parameter;
+import java.io.IOException;
+import java.util.ListIterator;
 
 /**
  * Implement a ticket
@@ -88,7 +87,7 @@ final class Ticket{
         ItemStack stack;
 
         if (CraftlandiaRails.myPlugin.getConfig().getBoolean("mustProvideBooks") &&
-                inv.contains(Material.BOOK_AND_QUILL)) {
+                inv.contains(Material.LEGACY_BOOK_AND_QUILL)) {
 
             // priority given to book in hand
             if (inv instanceof PlayerInventory) {
@@ -197,7 +196,7 @@ final class Ticket{
     private static boolean isEmptyBook(ItemStack stack) {
         BookMeta book;
 
-        if (stack != null && stack.getType().equals(Material.BOOK_AND_QUILL)) {
+        if (stack != null && stack.getType().equals(Material.LEGACY_BOOK_AND_QUILL)) {
 
             if (stack.hasItemMeta()) {
 

@@ -65,7 +65,7 @@ final class BC7004 extends AbstractIC implements Powerable{
             org.bukkit.block.Block rail = block.getRelative(BlockFace.UP, 2);
             org.bukkit.Location loc = rail.getLocation();
             // check that it is a track, and no cart is there
-            if (rail.getType().equals(Material.RAILS) && MathUtil.getVehicleByLocation(loc) == null) {
+            if (rail.getType().equals(Material.RAIL) && MathUtil.getVehicleByLocation(loc) == null) {
                 Entity entity = block.getWorld().spawnEntity(loc, getType());
                 // put a ticket in the inventory if necessary
                 if (entity instanceof InventoryHolder && AddressString.isResolvableAddressOrName(address)) {

@@ -50,7 +50,7 @@ final public class ClickedSignFactory{
      */
     static final public Clickable getBackwardClickedIC(Block block, Player player) {
         Material type = block.getState().getType();
-        if (type.equals(Material.SIGN_POST) || type.equals(Material.WALL_SIGN)) {
+        if (type.equals(Material.SIGN) || type.equals(Material.WALL_SIGN)) {
             BlockFace f = ((org.bukkit.material.Sign) block.getState().getData()).getFacing().getOppositeFace();
             f = MathUtil.straightUp(f);
 

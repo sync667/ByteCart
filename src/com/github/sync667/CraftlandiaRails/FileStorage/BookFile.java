@@ -1,17 +1,17 @@
 package com.github.sync667.CraftlandiaRails.FileStorage;
 
-import java.io.IOException;
-import java.io.OutputStream;
-import java.util.ArrayList;
-import java.util.List;
-
+import com.github.sync667.CraftlandiaRails.CraftlandiaRails;
 import org.bukkit.Bukkit;
 import org.bukkit.Material;
 import org.bukkit.inventory.Inventory;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.meta.BookMeta;
 
-import com.github.sync667.CraftlandiaRails.CraftlandiaRails;
+import java.io.IOException;
+import java.io.OutputStream;
+import java.util.ArrayList;
+import java.util.List;
+
 ;
 
 
@@ -252,7 +252,7 @@ public final class BookFile implements BCFile{
     }
 
     public static ItemStack sign(ItemStack mystack, String name) {
-        if (mystack == null || mystack.getType() != Material.BOOK_AND_QUILL) {
+        if (mystack == null || mystack.getType() != Material.LEGACY_BOOK_AND_QUILL) {
             return null;
         }
         mystack.setType(Material.WRITTEN_BOOK);

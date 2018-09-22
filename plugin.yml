@@ -2,7 +2,7 @@ name: CraftlandiaRails
 author: catageek, sync667
 description: An automatic transit system
 main: com.github.sync667.CraftlandiaRails.CraftlandiaRails
-version: 3.1.3
+version: 3.2.0
 database: false
 softdepend: [dynmap]
 permissions:
