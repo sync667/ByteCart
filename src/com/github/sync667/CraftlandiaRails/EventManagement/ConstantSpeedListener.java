@@ -1,8 +1,6 @@
 package com.github.sync667.CraftlandiaRails.EventManagement;
 
-import java.util.HashMap;
-import java.util.Map;
-
+import com.github.sync667.CraftlandiaRailsAPI.Util.MathUtil;
 import org.bukkit.Location;
 import org.bukkit.entity.Entity;
 import org.bukkit.entity.Minecart;
@@ -16,7 +14,8 @@ import org.bukkit.event.vehicle.VehicleEntityCollisionEvent;
 import org.bukkit.event.vehicle.VehicleMoveEvent;
 import org.bukkit.material.MaterialData;
 
-import com.github.catageek.ByteCartAPI.Util.MathUtil;
+import java.util.HashMap;
+import java.util.Map;
 
 /**
  * Listener to maintain cart speed

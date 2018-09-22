@@ -1,13 +1,12 @@
 package com.github.sync667.CraftlandiaRails.Updaters;
 
+import com.github.sync667.CraftlandiaRailsAPI.AddressLayer.Address;
+import com.github.sync667.CraftlandiaRailsAPI.Event.UpdaterClearRingEvent;
+import com.github.sync667.CraftlandiaRailsAPI.Signs.BCSign;
+import com.github.sync667.CraftlandiaRailsAPI.Wanderer.AbstractWanderer;
+import com.github.sync667.CraftlandiaRailsAPI.Wanderer.Wanderer;
 import org.bukkit.Bukkit;
 import org.bukkit.block.BlockFace;
-
-import com.github.catageek.ByteCartAPI.AddressLayer.Address;
-import com.github.catageek.ByteCartAPI.Event.UpdaterClearRingEvent;
-import com.github.catageek.ByteCartAPI.Signs.BCSign;
-import com.github.catageek.ByteCartAPI.Wanderer.AbstractWanderer;
-import com.github.catageek.ByteCartAPI.Wanderer.Wanderer;
 
 final class UpdaterResetRegion extends UpdaterRegion implements Wanderer{
 

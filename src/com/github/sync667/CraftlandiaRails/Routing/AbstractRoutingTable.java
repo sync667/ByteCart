@@ -1,11 +1,10 @@
 package com.github.sync667.CraftlandiaRails.Routing;
 
-import java.util.Iterator;
-import java.util.Set;
-
+import com.github.sync667.CraftlandiaRailsAPI.Wanderer.RoutingTable;
 import org.bukkit.block.BlockFace;
 
-import com.github.catageek.ByteCartAPI.Wanderer.RoutingTable;
+import java.util.Iterator;
+import java.util.Set;
 
 /**
  * An abstract class for routing tables
@@ -13,7 +12,7 @@ import com.github.catageek.ByteCartAPI.Wanderer.RoutingTable;
 abstract class AbstractRoutingTable implements RoutingTable{
 
     /* (non-Javadoc)
-     * @see com.github.catageek.ByteCartAPI.Wanderer.RoutingTable#isDirectlyConnected(int, org.bukkit.block.BlockFace)
+     * @see RoutingTable#isDirectlyConnected(int, org.bukkit.block.BlockFace)
      */
     @Override
     public final boolean isDirectlyConnected(int ring, BlockFace direction) {
@@ -24,7 +23,7 @@ abstract class AbstractRoutingTable implements RoutingTable{
     }
 
     /* (non-Javadoc)
-     * @see com.github.catageek.ByteCartAPI.Wanderer.RoutingTable#getDirectlyConnected(org.bukkit.block.BlockFace)
+     * @see RoutingTable#getDirectlyConnected(org.bukkit.block.BlockFace)
      */
     @Override
     public final int getDirectlyConnected(BlockFace direction) {
@@ -33,7 +32,7 @@ abstract class AbstractRoutingTable implements RoutingTable{
     }
 
     /* (non-Javadoc)
-     * @see com.github.catageek.ByteCartAPI.Wanderer.RoutingTable#getFirstUnknown()
+     * @see RoutingTable#getFirstUnknown()
      */
     @Override
     public final BlockFace getFirstUnknown() {
@@ -55,19 +54,19 @@ abstract class AbstractRoutingTable implements RoutingTable{
     }
 
     /* (non-Javadoc)
-     * @see com.github.catageek.ByteCartAPI.Wanderer.RoutingTable#getDirectlyConnectedList(org.bukkit.block.BlockFace)
+     * @see RoutingTable#getDirectlyConnectedList(org.bukkit.block.BlockFace)
      */
     @Override
     abstract public Set<Integer> getDirectlyConnectedList(BlockFace direction);
 
     /* (non-Javadoc)
-     * @see com.github.catageek.ByteCartAPI.Wanderer.RoutingTable#getMetric(int, org.bukkit.block.BlockFace)
+     * @see RoutingTable#getMetric(int, org.bukkit.block.BlockFace)
      */
     @Override
     abstract public int getMetric(int entry, BlockFace direction);
 
     /* (non-Javadoc)
-     * @see com.github.catageek.ByteCartAPI.Wanderer.RoutingTable#getMinMetric(int)
+     * @see RoutingTable#getMinMetric(int)
      */
     @Override
     abstract public int getMinMetric(int entry);
@@ -82,19 +81,19 @@ abstract class AbstractRoutingTable implements RoutingTable{
     abstract public void setEntry(int entry, BlockFace direction, int metric);
 
     /* (non-Javadoc)
-     * @see com.github.catageek.ByteCartAPI.Wanderer.RoutingTable#isEmpty(int)
+     * @see RoutingTable#isEmpty(int)
      */
     @Override
     abstract public boolean isEmpty(int entry);
 
     /* (non-Javadoc)
-     * @see com.github.catageek.ByteCartAPI.Wanderer.RoutingTable#getOrderedRouteNumbers()
+     * @see RoutingTable#getOrderedRouteNumbers()
      */
     @Override
     public abstract Iterator<Integer> getOrderedRouteNumbers();
 
     /* (non-Javadoc)
-     * @see com.github.catageek.ByteCartAPI.Wanderer.RoutingTable#getNotDirectlyConnectedList(org.bukkit.block.BlockFace)
+     * @see RoutingTable#getNotDirectlyConnectedList(org.bukkit.block.BlockFace)
      */
     @Override
     public abstract Set<Integer> getNotDirectlyConnectedList(BlockFace direction);
@@ -108,7 +107,7 @@ abstract class AbstractRoutingTable implements RoutingTable{
     abstract public void removeEntry(int entry, BlockFace from);
 
     /* (non-Javadoc)
-     * @see com.github.catageek.ByteCartAPI.Wanderer.RoutingTable#getDirection(int)
+     * @see RoutingTable#getDirection(int)
      */
     @Override
     abstract public BlockFace getDirection(int entry);

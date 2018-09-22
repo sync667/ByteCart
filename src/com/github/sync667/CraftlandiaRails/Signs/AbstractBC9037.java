@@ -1,11 +1,11 @@
 package com.github.sync667.CraftlandiaRails.Signs;
 
-import com.github.sync667.CraftlandiaRails.CraftlandiaRails;
 import com.github.sync667.CraftlandiaRails.AddressLayer.AddressFactory;
-import com.github.catageek.ByteCartAPI.AddressLayer.Address;
-import com.github.catageek.ByteCartAPI.CollisionManagement.IntersectionSide;
-import com.github.catageek.ByteCartAPI.HAL.RegistryBoth;
-import com.github.catageek.ByteCartAPI.HAL.RegistryInput;
+import com.github.sync667.CraftlandiaRails.CraftlandiaRails;
+import com.github.sync667.CraftlandiaRailsAPI.AddressLayer.Address;
+import com.github.sync667.CraftlandiaRailsAPI.CollisionManagement.IntersectionSide;
+import com.github.sync667.CraftlandiaRailsAPI.HAL.RegistryBoth;
+import com.github.sync667.CraftlandiaRailsAPI.HAL.RegistryInput;
 
 
 /**

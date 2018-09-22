@@ -3,11 +3,10 @@
  */
 package com.github.sync667.CraftlandiaRails.Signs;
 
-import java.io.IOException;
-
+import com.github.sync667.CraftlandiaRailsAPI.Util.MathUtil;
 import org.bukkit.entity.Minecart;
 
-import com.github.catageek.ByteCartAPI.Util.MathUtil;
+import java.io.IOException;
 
 /**
  * A booster

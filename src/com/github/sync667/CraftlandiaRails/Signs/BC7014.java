@@ -1,14 +1,13 @@
 package com.github.sync667.CraftlandiaRails.Signs;
 
-import org.bukkit.block.BlockFace;
-
-import com.github.sync667.CraftlandiaRails.CraftlandiaRails;
 import com.github.sync667.CraftlandiaRails.AddressLayer.AddressFactory;
 import com.github.sync667.CraftlandiaRails.AddressLayer.AddressRouted;
+import com.github.sync667.CraftlandiaRails.CraftlandiaRails;
 import com.github.sync667.CraftlandiaRails.IO.InputFactory;
-import com.github.catageek.ByteCartAPI.AddressLayer.Address;
-import com.github.catageek.ByteCartAPI.HAL.RegistryInput;
-import com.github.catageek.ByteCartAPI.Util.MathUtil;
+import com.github.sync667.CraftlandiaRailsAPI.AddressLayer.Address;
+import com.github.sync667.CraftlandiaRailsAPI.HAL.RegistryInput;
+import com.github.sync667.CraftlandiaRailsAPI.Util.MathUtil;
+import org.bukkit.block.BlockFace;
 
 /**
  * A station field setter using a redstone signal strength

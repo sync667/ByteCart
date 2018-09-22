@@ -1,11 +1,10 @@
 package com.github.sync667.CraftlandiaRails.AddressLayer;
 
+import com.github.sync667.CraftlandiaRails.AddressLayer.AddressBook.Parameter;
 import com.github.sync667.CraftlandiaRails.FileStorage.BookFile;
 import com.github.sync667.CraftlandiaRails.FileStorage.BookProperties;
+import com.github.sync667.CraftlandiaRailsAPI.AddressLayer.Address;
 import org.bukkit.inventory.Inventory;
-
-import com.github.sync667.CraftlandiaRails.AddressLayer.AddressBook.Parameter;
-import com.github.catageek.ByteCartAPI.AddressLayer.Address;
 
 /**
  * Factory class to create a return address from various supports

@@ -1,14 +1,13 @@
 package com.github.sync667.CraftlandiaRails.plugins;
 
-import java.sql.Connection;
-import java.sql.ResultSet;
-import java.sql.SQLException;
-import java.sql.Statement;
-import java.text.Normalizer;
-import java.text.Normalizer.Form;
-import java.util.regex.Matcher;
-import java.util.regex.Pattern;
-
+import code.husky.Database;
+import code.husky.mysql.MySQL;
+import code.husky.sqlite.SQLite;
+import com.github.sync667.CraftlandiaRails.CraftlandiaRails;
+import com.github.sync667.CraftlandiaRailsAPI.AddressLayer.Address;
+import com.github.sync667.CraftlandiaRailsAPI.AddressLayer.Resolver;
+import com.github.sync667.CraftlandiaRailsAPI.Event.*;
+import com.github.sync667.CraftlandiaRailsAPI.Signs.Station;
 import org.bukkit.ChatColor;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
@@ -18,19 +17,14 @@ import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 
-import com.github.sync667.CraftlandiaRails.CraftlandiaRails;
-import com.github.catageek.ByteCartAPI.AddressLayer.Address;
-import com.github.catageek.ByteCartAPI.AddressLayer.Resolver;
-import com.github.catageek.ByteCartAPI.Event.SignCreateEvent;
-import com.github.catageek.ByteCartAPI.Event.SignRemoveEvent;
-import com.github.catageek.ByteCartAPI.Event.UpdaterClearStationEvent;
-import com.github.catageek.ByteCartAPI.Event.UpdaterPassStationEvent;
-import com.github.catageek.ByteCartAPI.Event.UpdaterSetStationEvent;
-import com.github.catageek.ByteCartAPI.Signs.Station;
-
-import code.husky.Database;
-import code.husky.mysql.MySQL;
-import code.husky.sqlite.SQLite;
+import java.sql.Connection;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
+import java.text.Normalizer;
+import java.text.Normalizer.Form;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 public final class BCHostnameResolutionPlugin implements Resolver, Listener, CommandExecutor{
     private String database = CraftlandiaRails.myPlugin.getConfig().getString("database", "BCHostnames");

@@ -3,10 +3,9 @@ package com.github.sync667.CraftlandiaRails.CollisionManagement;
 import com.github.sync667.CraftlandiaRails.CraftlandiaRails;
 import com.github.sync667.CraftlandiaRails.Signs.Triggable;
 import com.github.sync667.CraftlandiaRails.Storage.ExpirableMap;
+import com.github.sync667.CraftlandiaRailsAPI.CollisionManagement.IntersectionSide;
+import com.github.sync667.CraftlandiaRailsAPI.HAL.RegistryOutput;
 import org.bukkit.Location;
-
-import com.github.catageek.ByteCartAPI.CollisionManagement.IntersectionSide;
-import com.github.catageek.ByteCartAPI.HAL.RegistryOutput;
 
 /**
  * A collision avoider for T cross-roads

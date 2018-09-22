@@ -1,13 +1,13 @@
 package com.github.sync667.CraftlandiaRails.Routing;
 
+import com.github.sync667.CraftlandiaRails.CraftlandiaRails;
+import com.github.sync667.CraftlandiaRailsAPI.Util.DirectionRegistry;
+import com.github.sync667.CraftlandiaRailsAPI.Wanderer.Counter;
+
 import java.io.Serializable;
 import java.util.HashMap;
 import java.util.Iterator;
 import java.util.Map;
-
-import com.github.sync667.CraftlandiaRails.CraftlandiaRails;
-import com.github.catageek.ByteCartAPI.Util.DirectionRegistry;
-import com.github.catageek.ByteCartAPI.Wanderer.Counter;
 
 /**
  * A map containing counters with id

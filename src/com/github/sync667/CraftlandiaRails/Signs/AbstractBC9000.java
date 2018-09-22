@@ -1,22 +1,21 @@
 package com.github.sync667.CraftlandiaRails.Signs;
 
-import java.io.IOException;
-
-import org.bukkit.Bukkit;
-
-import com.github.sync667.CraftlandiaRails.CraftlandiaRails;
 import com.github.sync667.CraftlandiaRails.AddressLayer.AddressRouted;
 import com.github.sync667.CraftlandiaRails.CollisionManagement.SimpleCollisionAvoider;
+import com.github.sync667.CraftlandiaRails.CraftlandiaRails;
 import com.github.sync667.CraftlandiaRails.HAL.SubRegistry;
-import com.github.catageek.ByteCartAPI.AddressLayer.Address;
-import com.github.catageek.ByteCartAPI.CollisionManagement.IntersectionSide.Side;
-import com.github.catageek.ByteCartAPI.Event.SignPostSubnetEvent;
-import com.github.catageek.ByteCartAPI.Event.SignPreSubnetEvent;
-import com.github.catageek.ByteCartAPI.HAL.RegistryBoth;
-import com.github.catageek.ByteCartAPI.HAL.RegistryInput;
-import com.github.catageek.ByteCartAPI.Signs.HasNetmask;
-import com.github.catageek.ByteCartAPI.Signs.Subnet;
-import com.github.catageek.ByteCartAPI.Wanderer.Wanderer;
+import com.github.sync667.CraftlandiaRailsAPI.AddressLayer.Address;
+import com.github.sync667.CraftlandiaRailsAPI.CollisionManagement.IntersectionSide.Side;
+import com.github.sync667.CraftlandiaRailsAPI.Event.SignPostSubnetEvent;
+import com.github.sync667.CraftlandiaRailsAPI.Event.SignPreSubnetEvent;
+import com.github.sync667.CraftlandiaRailsAPI.HAL.RegistryBoth;
+import com.github.sync667.CraftlandiaRailsAPI.HAL.RegistryInput;
+import com.github.sync667.CraftlandiaRailsAPI.Signs.HasNetmask;
+import com.github.sync667.CraftlandiaRailsAPI.Signs.Subnet;
+import com.github.sync667.CraftlandiaRailsAPI.Wanderer.Wanderer;
+import org.bukkit.Bukkit;
+
+import java.io.IOException;
 
 
 /**

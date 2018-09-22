@@ -1,17 +1,16 @@
 package com.github.sync667.CraftlandiaRails.Signs;
 
+import com.github.sync667.CraftlandiaRails.AddressLayer.AddressFactory;
+import com.github.sync667.CraftlandiaRails.AddressLayer.AddressRouted;
+import com.github.sync667.CraftlandiaRails.AddressLayer.TicketFactory;
+import com.github.sync667.CraftlandiaRails.CraftlandiaRails;
+import com.github.sync667.CraftlandiaRails.HAL.AbstractIC;
+import com.github.sync667.CraftlandiaRailsAPI.AddressLayer.Address;
 import org.bukkit.Bukkit;
 import org.bukkit.Location;
 import org.bukkit.entity.Minecart;
 import org.bukkit.entity.Player;
 import org.bukkit.inventory.InventoryHolder;
-
-import com.github.sync667.CraftlandiaRails.CraftlandiaRails;
-import com.github.sync667.CraftlandiaRails.AddressLayer.AddressFactory;
-import com.github.sync667.CraftlandiaRails.AddressLayer.AddressRouted;
-import com.github.sync667.CraftlandiaRails.AddressLayer.TicketFactory;
-import com.github.sync667.CraftlandiaRails.HAL.AbstractIC;
-import com.github.catageek.ByteCartAPI.AddressLayer.Address;
 
 /**
  * Base class for all signs that are triggered by vehicles that pass over it.

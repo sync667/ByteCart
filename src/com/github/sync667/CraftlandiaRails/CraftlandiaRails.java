@@ -1,28 +1,27 @@
 package com.github.sync667.CraftlandiaRails;
 
-import java.util.logging.Logger;
-
+import com.github.sync667.CraftlandiaRails.CollisionManagement.CollisionAvoiderManager;
+import com.github.sync667.CraftlandiaRails.EventManagement.ByteCartListener;
+import com.github.sync667.CraftlandiaRails.EventManagement.ConstantSpeedListener;
+import com.github.sync667.CraftlandiaRails.EventManagement.PreloadChunkListener;
 import com.github.sync667.CraftlandiaRails.Storage.IsTrainManager;
 import com.github.sync667.CraftlandiaRails.Wanderer.BCWandererManager;
 import com.github.sync667.CraftlandiaRails.plugins.BCDynmapPlugin;
 import com.github.sync667.CraftlandiaRails.plugins.BCHostnameResolutionPlugin;
 import com.github.sync667.CraftlandiaRails.plugins.BCWandererTracker;
+import com.github.sync667.CraftlandiaRailsAPI.AddressLayer.Resolver;
+import com.github.sync667.CraftlandiaRailsAPI.CraftlandiaRailsAPI;
+import com.github.sync667.CraftlandiaRailsAPI.CraftlandiaRailsPlugin;
 import org.bukkit.Bukkit;
 import org.bukkit.event.HandlerList;
 import org.bukkit.plugin.java.JavaPlugin;
 
-import com.github.sync667.CraftlandiaRails.CollisionManagement.CollisionAvoiderManager;
-import com.github.sync667.CraftlandiaRails.EventManagement.ByteCartListener;
-import com.github.sync667.CraftlandiaRails.EventManagement.ConstantSpeedListener;
-import com.github.sync667.CraftlandiaRails.EventManagement.PreloadChunkListener;
-import com.github.catageek.ByteCartAPI.ByteCartAPI;
-import com.github.catageek.ByteCartAPI.ByteCartPlugin;
-import com.github.catageek.ByteCartAPI.AddressLayer.Resolver;
+import java.util.logging.Logger;
 
 /**
  * Main class
  */
-public final class CraftlandiaRails extends JavaPlugin implements ByteCartPlugin{
+public final class CraftlandiaRails extends JavaPlugin implements CraftlandiaRailsPlugin{
 
     public static Logger log = Logger.getLogger("Minecraft");
     public static CraftlandiaRails myPlugin;
@@ -45,7 +44,7 @@ public final class CraftlandiaRails extends JavaPlugin implements ByteCartPlugin
 
         myPlugin = this;
 
-        ByteCartAPI.setPlugin(this);
+        CraftlandiaRailsAPI.setPlugin(this);
 
         this.saveDefaultConfig();
 
@@ -73,7 +72,7 @@ public final class CraftlandiaRails extends JavaPlugin implements ByteCartPlugin
         if (this.getConfig().getBoolean("hostname_resolution", true)) {
             hostnamePlugin = new BCHostnameResolutionPlugin();
             hostnamePlugin.onLoad();
-            ByteCartAPI.setResolver(hostnamePlugin);
+            CraftlandiaRailsAPI.setResolver(hostnamePlugin);
             getServer().getPluginManager().registerEvents(hostnamePlugin, this);
             getCommand("host").setExecutor(hostnamePlugin);
         }
@@ -99,7 +98,7 @@ public final class CraftlandiaRails extends JavaPlugin implements ByteCartPlugin
         log.info("Your plugin has been disabled.");
 
         myPlugin = null;
-        ByteCartAPI.setPlugin(null);
+        CraftlandiaRailsAPI.setPlugin(null);
         log = null;
 
     }

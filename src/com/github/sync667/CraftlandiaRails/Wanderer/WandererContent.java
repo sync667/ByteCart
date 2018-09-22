@@ -1,22 +1,17 @@
 package com.github.sync667.CraftlandiaRails.Wanderer;
 
-import java.util.Calendar;
-import java.util.HashMap;
-import java.util.Iterator;
-import java.util.Map;
-import java.util.Stack;
-
+import com.github.sync667.CraftlandiaRails.CraftlandiaRails;
+import com.github.sync667.CraftlandiaRails.Routing.BCCounter;
+import com.github.sync667.CraftlandiaRails.Routing.Metric;
+import com.github.sync667.CraftlandiaRailsAPI.Util.DirectionRegistry;
+import com.github.sync667.CraftlandiaRailsAPI.Wanderer.InventoryContent;
+import com.github.sync667.CraftlandiaRailsAPI.Wanderer.RoutingTable;
+import com.github.sync667.CraftlandiaRailsAPI.Wanderer.Wanderer;
 import org.bukkit.Bukkit;
 import org.bukkit.entity.Player;
 import org.bukkit.inventory.Inventory;
 
-import com.github.sync667.CraftlandiaRails.CraftlandiaRails;
-import com.github.sync667.CraftlandiaRails.Routing.BCCounter;
-import com.github.sync667.CraftlandiaRails.Routing.Metric;
-import com.github.catageek.ByteCartAPI.Util.DirectionRegistry;
-import com.github.catageek.ByteCartAPI.Wanderer.InventoryContent;
-import com.github.catageek.ByteCartAPI.Wanderer.RoutingTable;
-import com.github.catageek.ByteCartAPI.Wanderer.Wanderer;
+import java.util.*;
 
 public class WandererContent implements InventoryContent{
 
@@ -25,7 +20,7 @@ public class WandererContent implements InventoryContent{
      */
     private static final long serialVersionUID = - 9068486630910859194L;
 
-    private transient Inventory inventory = null;
+    private transient Inventory inventory;
     private String player;
 
     private BCCounter counter;
@@ -40,7 +35,7 @@ public class WandererContent implements InventoryContent{
 
     private long expirationtime;
 
-    protected Map<Integer, Metric> tablemap = new HashMap<Integer, Metric>();
+    protected Map<Integer, Metric> tablemap = new HashMap<>();
 
 
     public WandererContent(Inventory inv, Wanderer.Level level, int region, Player player) {
@@ -49,8 +44,8 @@ public class WandererContent implements InventoryContent{
         this.inventory = inv;
         this.player = player.getName();
         counter = new BCCounter();
-        setStart(new Stack<Integer>());
-        setEnd(new Stack<Integer>());
+        setStart(new Stack<>());
+        setEnd(new Stack<>());
     }
 
     /**

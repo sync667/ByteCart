@@ -1,11 +1,10 @@
 package com.github.sync667.CraftlandiaRails.CollisionManagement;
 
-import java.util.EnumSet;
-import java.util.Set;
-
+import com.github.sync667.CraftlandiaRailsAPI.Util.MathUtil;
 import org.bukkit.block.BlockFace;
 
-import com.github.catageek.ByteCartAPI.Util.MathUtil;
+import java.util.EnumSet;
+import java.util.Set;
 
 /**
  * A router where a cart turns left

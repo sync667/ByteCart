@@ -1,10 +1,9 @@
 package com.github.sync667.CraftlandiaRails.AddressLayer;
 
 import com.github.sync667.CraftlandiaRails.CraftlandiaRails;
+import com.github.sync667.CraftlandiaRailsAPI.AddressLayer.Address;
+import com.github.sync667.CraftlandiaRailsAPI.HAL.RegistryBoth;
 import org.bukkit.entity.Player;
-
-import com.github.catageek.ByteCartAPI.AddressLayer.Address;
-import com.github.catageek.ByteCartAPI.HAL.RegistryBoth;
 
 /**
  * A class implementing an address using a book as support

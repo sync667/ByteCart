@@ -1,25 +1,20 @@
 package com.github.sync667.CraftlandiaRails.Updaters;
 
-import java.util.Stack;
-
-import org.bukkit.Bukkit;
-
-import com.github.sync667.CraftlandiaRails.CraftlandiaRails;
 import com.github.sync667.CraftlandiaRails.AddressLayer.AddressFactory;
+import com.github.sync667.CraftlandiaRails.CraftlandiaRails;
 import com.github.sync667.CraftlandiaRails.IO.ComponentSign;
 import com.github.sync667.CraftlandiaRails.Signs.BC9001;
 import com.github.sync667.CraftlandiaRails.Util.LogUtil;
-import com.github.catageek.ByteCartAPI.ByteCartAPI;
-import com.github.catageek.ByteCartAPI.AddressLayer.Address;
-import com.github.catageek.ByteCartAPI.CollisionManagement.IntersectionSide.Side;
-import com.github.catageek.ByteCartAPI.Event.UpdaterEnterSubnetEvent;
-import com.github.catageek.ByteCartAPI.Event.UpdaterLeaveSubnetEvent;
-import com.github.catageek.ByteCartAPI.Event.UpdaterPassStationEvent;
-import com.github.catageek.ByteCartAPI.Event.UpdaterSetStationEvent;
-import com.github.catageek.ByteCartAPI.Event.UpdaterSetSubnetEvent;
-import com.github.catageek.ByteCartAPI.Signs.BCSign;
-import com.github.catageek.ByteCartAPI.Wanderer.DefaultLocalWanderer;
-import com.github.catageek.ByteCartAPI.Wanderer.Wanderer;
+import com.github.sync667.CraftlandiaRailsAPI.AddressLayer.Address;
+import com.github.sync667.CraftlandiaRailsAPI.CollisionManagement.IntersectionSide.Side;
+import com.github.sync667.CraftlandiaRailsAPI.CraftlandiaRailsAPI;
+import com.github.sync667.CraftlandiaRailsAPI.Event.*;
+import com.github.sync667.CraftlandiaRailsAPI.Signs.BCSign;
+import com.github.sync667.CraftlandiaRailsAPI.Wanderer.DefaultLocalWanderer;
+import com.github.sync667.CraftlandiaRailsAPI.Wanderer.Wanderer;
+import org.bukkit.Bukkit;
+
+import java.util.Stack;
 
 public class UpdaterLocal extends DefaultLocalWanderer<UpdaterContent> implements Wanderer{
 
@@ -30,7 +25,7 @@ public class UpdaterLocal extends DefaultLocalWanderer<UpdaterContent> implement
     @Override
     public void doAction(Side to) {
 
-        if (this.getNetmask() == ByteCartAPI.MAXSTATIONLOG) {
+        if (this.getNetmask() == CraftlandiaRailsAPI.MAXSTATIONLOG) {
             // Erase default name "Station"
             // TODO : added 04/2015, to be removed
             if (((BC9001) this.getBcSign()).getStationName().equals("Station")) {
@@ -50,7 +45,7 @@ public class UpdaterLocal extends DefaultLocalWanderer<UpdaterContent> implement
 
         // we did not enter the subnet
         int start;
-        if (to.Value() != Side.LEVER_ON.Value() && this.getNetmask() < ByteCartAPI.MAXSTATIONLOG) {
+        if (to.Value() != Side.LEVER_ON.Value() && this.getNetmask() < CraftlandiaRailsAPI.MAXSTATIONLOG) {
             // if we have the same sign as when entering the subnet, close the subnet
             if (this.isExactSubnet((start = this.getFirstStationNumber()), this.getNetmask())) {
                 this.getSignAddress().setAddress(buildAddress(start));
@@ -62,7 +57,7 @@ public class UpdaterLocal extends DefaultLocalWanderer<UpdaterContent> implement
             return;
         }
 
-        int length = (ByteCartAPI.MAXSTATION >> this.getNetmask());
+        int length = (CraftlandiaRailsAPI.MAXSTATION >> this.getNetmask());
         // if sign is not consistent, rewrite it
         if (! getSignAddress().isValid() || this.needUpdate()) {
             Address old = this.getSignAddress();
@@ -151,7 +146,7 @@ public class UpdaterLocal extends DefaultLocalWanderer<UpdaterContent> implement
         boolean free;
         int start = getFirstStationNumber();
         int end = getLastStationNumber();
-        int step = ByteCartAPI.MAXSTATION >> netmask;
+        int step = CraftlandiaRailsAPI.MAXSTATION >> netmask;
         if (CraftlandiaRails.debug) {
             CraftlandiaRails.log
                     .info("CraftlandiaRails : getFreeSubnet() : start = " + start + " end " + end + " step = " + step +
@@ -186,7 +181,7 @@ public class UpdaterLocal extends DefaultLocalWanderer<UpdaterContent> implement
 
     private final boolean isInSubnet(int address, int netmask) {
         return (address >= this.getFirstStationNumber() &&
-                (address | ((ByteCartAPI.MAXSTATION - 1) >> netmask)) < this.getLastStationNumber());
+                (address | ((CraftlandiaRailsAPI.MAXSTATION - 1) >> netmask)) < this.getLastStationNumber());
     }
 
     private final boolean needUpdate() {

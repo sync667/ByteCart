@@ -1,9 +1,9 @@
 package com.github.sync667.CraftlandiaRails.HAL;
 
-import com.github.catageek.ByteCartAPI.HAL.Registry;
-import com.github.catageek.ByteCartAPI.HAL.RegistryBoth;
-import com.github.catageek.ByteCartAPI.HAL.RegistryInput;
-import com.github.catageek.ByteCartAPI.HAL.RegistryOutput;
+import com.github.sync667.CraftlandiaRailsAPI.HAL.Registry;
+import com.github.sync667.CraftlandiaRailsAPI.HAL.RegistryBoth;
+import com.github.sync667.CraftlandiaRailsAPI.HAL.RegistryInput;
+import com.github.sync667.CraftlandiaRailsAPI.HAL.RegistryOutput;
 
 // This class represents 2 registries merged
 

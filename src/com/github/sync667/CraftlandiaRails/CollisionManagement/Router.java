@@ -1,8 +1,7 @@
 package com.github.sync667.CraftlandiaRails.CollisionManagement;
 
+import com.github.sync667.CraftlandiaRailsAPI.HAL.RegistryOutput;
 import org.bukkit.block.BlockFace;
-
-import com.github.catageek.ByteCartAPI.HAL.RegistryOutput;
 
 /**
  * A router representation in the collision management layer

@@ -1,13 +1,12 @@
 package com.github.sync667.CraftlandiaRails.Signs;
 
+import com.github.sync667.CraftlandiaRails.HAL.AbstractIC;
+import com.github.sync667.CraftlandiaRailsAPI.Util.MathUtil;
 import org.bukkit.Material;
 import org.bukkit.block.Block;
 import org.bukkit.block.BlockFace;
 import org.bukkit.block.Sign;
 import org.bukkit.entity.Player;
-
-import com.github.sync667.CraftlandiaRails.HAL.AbstractIC;
-import com.github.catageek.ByteCartAPI.Util.MathUtil;
 
 /**
  * This class contains the method to instantiate any IC

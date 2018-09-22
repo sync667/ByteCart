@@ -1,14 +1,14 @@
 package com.github.sync667.CraftlandiaRails.HAL;
 
+import com.github.sync667.CraftlandiaRails.IO.InputPin;
+import com.github.sync667.CraftlandiaRails.IO.OutputPin;
+import com.github.sync667.CraftlandiaRailsAPI.HAL.Registry;
+import com.github.sync667.CraftlandiaRailsAPI.HAL.RegistryInput;
+import com.github.sync667.CraftlandiaRailsAPI.HAL.RegistryOutput;
+
 import java.util.Arrays;
 import java.util.List;
 import java.util.ListIterator;
-
-import com.github.sync667.CraftlandiaRails.IO.InputPin;
-import com.github.sync667.CraftlandiaRails.IO.OutputPin;
-import com.github.catageek.ByteCartAPI.HAL.Registry;
-import com.github.catageek.ByteCartAPI.HAL.RegistryInput;
-import com.github.catageek.ByteCartAPI.HAL.RegistryOutput;
 
 /**
  * A registry implementation

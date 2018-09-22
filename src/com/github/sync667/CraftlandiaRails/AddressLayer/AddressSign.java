@@ -2,10 +2,9 @@ package com.github.sync667.CraftlandiaRails.AddressLayer;
 
 import com.github.sync667.CraftlandiaRails.IO.AbstractComponent;
 import com.github.sync667.CraftlandiaRails.IO.ComponentSign;
+import com.github.sync667.CraftlandiaRailsAPI.AddressLayer.Address;
+import com.github.sync667.CraftlandiaRailsAPI.HAL.RegistryBoth;
 import org.bukkit.block.Block;
-
-import com.github.catageek.ByteCartAPI.AddressLayer.Address;
-import com.github.catageek.ByteCartAPI.HAL.RegistryBoth;
 
 
 /**

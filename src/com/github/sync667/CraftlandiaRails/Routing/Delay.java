@@ -1,12 +1,12 @@
 package com.github.sync667.CraftlandiaRails.Routing;
 
+import com.github.sync667.CraftlandiaRailsAPI.HAL.RegistryBoth;
+import com.github.sync667.CraftlandiaRailsAPI.HAL.VirtualRegistry;
+
 import java.io.Externalizable;
 import java.io.IOException;
 import java.io.ObjectInput;
 import java.io.ObjectOutput;
-
-import com.github.catageek.ByteCartAPI.HAL.RegistryBoth;
-import com.github.catageek.ByteCartAPI.HAL.VirtualRegistry;
 
 /**
  * A time metric

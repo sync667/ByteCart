@@ -1,7 +1,7 @@
 package com.github.sync667.CraftlandiaRails.Signs;
 
-import com.github.catageek.ByteCartAPI.Signs.HasNetmask;
-import com.github.catageek.ByteCartAPI.Signs.Subnet;
+import com.github.sync667.CraftlandiaRailsAPI.Signs.HasNetmask;
+import com.github.sync667.CraftlandiaRailsAPI.Signs.Subnet;
 
 
 /**

@@ -1,6 +1,6 @@
 package com.github.sync667.CraftlandiaRails.AddressLayer;
 
-import com.github.catageek.ByteCartAPI.AddressLayer.Address;
+import com.github.sync667.CraftlandiaRailsAPI.AddressLayer.Address;
 
 
 /**

@@ -1,11 +1,11 @@
 package com.github.sync667.CraftlandiaRails.Signs;
 
-import java.io.IOException;
-
-import com.github.sync667.CraftlandiaRails.CraftlandiaRails;
 import com.github.sync667.CraftlandiaRails.CollisionManagement.SimpleCollisionAvoider;
+import com.github.sync667.CraftlandiaRails.CraftlandiaRails;
 import com.github.sync667.CraftlandiaRails.Updaters.UpdaterLocal;
-import com.github.catageek.ByteCartAPI.Signs.Subnet;
+import com.github.sync667.CraftlandiaRailsAPI.Signs.Subnet;
+
+import java.io.IOException;
 
 
 /**

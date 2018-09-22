@@ -1,22 +1,21 @@
 package com.github.sync667.CraftlandiaRails.Updaters;
 
-import java.util.Stack;
-
+import com.github.sync667.CraftlandiaRails.CraftlandiaRails;
+import com.github.sync667.CraftlandiaRails.Signs.BC9001;
+import com.github.sync667.CraftlandiaRailsAPI.AddressLayer.Address;
+import com.github.sync667.CraftlandiaRailsAPI.CollisionManagement.IntersectionSide;
+import com.github.sync667.CraftlandiaRailsAPI.CollisionManagement.IntersectionSide.Side;
+import com.github.sync667.CraftlandiaRailsAPI.CraftlandiaRailsAPI;
+import com.github.sync667.CraftlandiaRailsAPI.Event.UpdaterClearStationEvent;
+import com.github.sync667.CraftlandiaRailsAPI.Event.UpdaterClearSubnetEvent;
+import com.github.sync667.CraftlandiaRailsAPI.Event.UpdaterSignInvalidateEvent;
+import com.github.sync667.CraftlandiaRailsAPI.Signs.BCSign;
+import com.github.sync667.CraftlandiaRailsAPI.Wanderer.AbstractWanderer;
+import com.github.sync667.CraftlandiaRailsAPI.Wanderer.Wanderer;
 import org.bukkit.Bukkit;
 import org.bukkit.block.BlockFace;
 
-import com.github.sync667.CraftlandiaRails.CraftlandiaRails;
-import com.github.sync667.CraftlandiaRails.Signs.BC9001;
-import com.github.catageek.ByteCartAPI.ByteCartAPI;
-import com.github.catageek.ByteCartAPI.AddressLayer.Address;
-import com.github.catageek.ByteCartAPI.CollisionManagement.IntersectionSide;
-import com.github.catageek.ByteCartAPI.CollisionManagement.IntersectionSide.Side;
-import com.github.catageek.ByteCartAPI.Event.UpdaterClearStationEvent;
-import com.github.catageek.ByteCartAPI.Event.UpdaterClearSubnetEvent;
-import com.github.catageek.ByteCartAPI.Event.UpdaterSignInvalidateEvent;
-import com.github.catageek.ByteCartAPI.Signs.BCSign;
-import com.github.catageek.ByteCartAPI.Wanderer.AbstractWanderer;
-import com.github.catageek.ByteCartAPI.Wanderer.Wanderer;
+import java.util.Stack;
 
 final class UpdaterResetLocal extends UpdaterLocal implements Wanderer{
 
@@ -71,8 +70,8 @@ final class UpdaterResetLocal extends UpdaterLocal implements Wanderer{
                             new UpdaterClearStationEvent(this, address, ((BC9001) this.getBcSign()).getStationName());
                     Bukkit.getServer().getPluginManager().callEvent(event);
                 } else {
-                    UpdaterClearSubnetEvent event =
-                            new UpdaterClearSubnetEvent(this, address, ByteCartAPI.MAXSTATION >> this.getNetmask());
+                    UpdaterClearSubnetEvent event = new UpdaterClearSubnetEvent(this, address,
+                            CraftlandiaRailsAPI.MAXSTATION >> this.getNetmask());
                     Bukkit.getServer().getPluginManager().callEvent(event);
                 }
                 address.remove();

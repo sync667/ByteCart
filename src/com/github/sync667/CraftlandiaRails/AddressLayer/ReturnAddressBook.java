@@ -1,7 +1,7 @@
 package com.github.sync667.CraftlandiaRails.AddressLayer;
 
 import com.github.sync667.CraftlandiaRails.AddressLayer.AddressBook.Parameter;
-import com.github.catageek.ByteCartAPI.HAL.RegistryBoth;
+import com.github.sync667.CraftlandiaRailsAPI.HAL.RegistryBoth;
 
 /**
  * A class implementing a return address in a book

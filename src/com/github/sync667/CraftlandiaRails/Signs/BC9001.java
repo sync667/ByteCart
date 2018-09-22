@@ -1,27 +1,26 @@
 package com.github.sync667.CraftlandiaRails.Signs;
 
-import java.io.IOException;
-
+import com.github.sync667.CraftlandiaRails.AddressLayer.AddressFactory;
+import com.github.sync667.CraftlandiaRails.CraftlandiaRails;
+import com.github.sync667.CraftlandiaRails.HAL.PinRegistry;
+import com.github.sync667.CraftlandiaRails.IO.InputFactory;
+import com.github.sync667.CraftlandiaRails.IO.InputPin;
+import com.github.sync667.CraftlandiaRailsAPI.AddressLayer.Address;
+import com.github.sync667.CraftlandiaRailsAPI.CollisionManagement.IntersectionSide;
+import com.github.sync667.CraftlandiaRailsAPI.CollisionManagement.IntersectionSide.Side;
+import com.github.sync667.CraftlandiaRailsAPI.CraftlandiaRailsAPI;
+import com.github.sync667.CraftlandiaRailsAPI.Event.SignPostStationEvent;
+import com.github.sync667.CraftlandiaRailsAPI.Event.SignPreStationEvent;
+import com.github.sync667.CraftlandiaRailsAPI.Signs.Station;
+import com.github.sync667.CraftlandiaRailsAPI.Util.MathUtil;
+import com.github.sync667.CraftlandiaRailsAPI.Wanderer.Wanderer;
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
 import org.bukkit.block.BlockFace;
 import org.bukkit.block.Sign;
 import org.bukkit.entity.Player;
 
-import com.github.sync667.CraftlandiaRails.CraftlandiaRails;
-import com.github.sync667.CraftlandiaRails.AddressLayer.AddressFactory;
-import com.github.sync667.CraftlandiaRails.HAL.PinRegistry;
-import com.github.sync667.CraftlandiaRails.IO.InputFactory;
-import com.github.sync667.CraftlandiaRails.IO.InputPin;
-import com.github.catageek.ByteCartAPI.ByteCartAPI;
-import com.github.catageek.ByteCartAPI.AddressLayer.Address;
-import com.github.catageek.ByteCartAPI.CollisionManagement.IntersectionSide;
-import com.github.catageek.ByteCartAPI.CollisionManagement.IntersectionSide.Side;
-import com.github.catageek.ByteCartAPI.Event.SignPostStationEvent;
-import com.github.catageek.ByteCartAPI.Event.SignPreStationEvent;
-import com.github.catageek.ByteCartAPI.Signs.Station;
-import com.github.catageek.ByteCartAPI.Util.MathUtil;
-import com.github.catageek.ByteCartAPI.Wanderer.Wanderer;
+import java.io.IOException;
 
 
 /**
@@ -32,7 +31,7 @@ public final class BC9001 extends AbstractBC9000 implements Station, Powerable, 
 
     BC9001(org.bukkit.block.Block block, org.bukkit.entity.Vehicle vehicle) {
         super(block, vehicle);
-        this.netmask = ByteCartAPI.MAXSTATIONLOG;
+        this.netmask = CraftlandiaRailsAPI.MAXSTATIONLOG;
     }
 
     /* (non-Javadoc)

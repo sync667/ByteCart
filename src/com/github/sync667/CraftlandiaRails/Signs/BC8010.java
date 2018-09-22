@@ -1,9 +1,22 @@
 package com.github.sync667.CraftlandiaRails.Signs;
 
-import java.io.IOException;
-
+import com.github.sync667.CraftlandiaRails.AddressLayer.AddressFactory;
+import com.github.sync667.CraftlandiaRails.AddressLayer.AddressRouted;
+import com.github.sync667.CraftlandiaRails.AddressLayer.ReturnAddressFactory;
+import com.github.sync667.CraftlandiaRails.CollisionManagement.CollisionAvoiderBuilder;
+import com.github.sync667.CraftlandiaRails.CollisionManagement.Router;
+import com.github.sync667.CraftlandiaRails.CollisionManagement.RouterCollisionAvoiderBuilder;
+import com.github.sync667.CraftlandiaRails.CraftlandiaRails;
 import com.github.sync667.CraftlandiaRails.Routing.RoutingTableFactory;
 import com.github.sync667.CraftlandiaRails.Routing.RoutingTableWritable;
+import com.github.sync667.CraftlandiaRailsAPI.AddressLayer.Address;
+import com.github.sync667.CraftlandiaRailsAPI.Event.SignPostRouteEvent;
+import com.github.sync667.CraftlandiaRailsAPI.Event.SignPreRouteEvent;
+import com.github.sync667.CraftlandiaRailsAPI.Event.UpdaterPassRouterEvent;
+import com.github.sync667.CraftlandiaRailsAPI.Signs.BCRouter;
+import com.github.sync667.CraftlandiaRailsAPI.Util.MathUtil;
+import com.github.sync667.CraftlandiaRailsAPI.Wanderer.AbstractWanderer;
+import com.github.sync667.CraftlandiaRailsAPI.Wanderer.Wanderer;
 import org.bukkit.Bukkit;
 import org.bukkit.block.Block;
 import org.bukkit.block.BlockFace;
@@ -11,21 +24,7 @@ import org.bukkit.block.BlockState;
 import org.bukkit.inventory.Inventory;
 import org.bukkit.inventory.InventoryHolder;
 
-import com.github.sync667.CraftlandiaRails.CraftlandiaRails;
-import com.github.sync667.CraftlandiaRails.AddressLayer.AddressFactory;
-import com.github.sync667.CraftlandiaRails.AddressLayer.AddressRouted;
-import com.github.sync667.CraftlandiaRails.AddressLayer.ReturnAddressFactory;
-import com.github.sync667.CraftlandiaRails.CollisionManagement.CollisionAvoiderBuilder;
-import com.github.sync667.CraftlandiaRails.CollisionManagement.Router;
-import com.github.sync667.CraftlandiaRails.CollisionManagement.RouterCollisionAvoiderBuilder;
-import com.github.catageek.ByteCartAPI.AddressLayer.Address;
-import com.github.catageek.ByteCartAPI.Event.SignPostRouteEvent;
-import com.github.catageek.ByteCartAPI.Event.SignPreRouteEvent;
-import com.github.catageek.ByteCartAPI.Event.UpdaterPassRouterEvent;
-import com.github.catageek.ByteCartAPI.Signs.BCRouter;
-import com.github.catageek.ByteCartAPI.Util.MathUtil;
-import com.github.catageek.ByteCartAPI.Wanderer.AbstractWanderer;
-import com.github.catageek.ByteCartAPI.Wanderer.Wanderer;
+import java.io.IOException;
 
 
 /**

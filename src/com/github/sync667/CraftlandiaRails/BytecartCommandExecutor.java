@@ -1,5 +1,10 @@
 package com.github.sync667.CraftlandiaRails;
 
+import com.github.sync667.CraftlandiaRails.AddressLayer.AddressFactory;
+import com.github.sync667.CraftlandiaRails.AddressLayer.AddressRouted;
+import com.github.sync667.CraftlandiaRails.AddressLayer.AddressString;
+import com.github.sync667.CraftlandiaRails.EventManagement.ByteCartInventoryListener;
+import com.github.sync667.CraftlandiaRails.EventManagement.ByteCartUpdaterMoveListener;
 import com.github.sync667.CraftlandiaRails.Signs.BC7010;
 import com.github.sync667.CraftlandiaRails.Signs.BC7011;
 import com.github.sync667.CraftlandiaRails.Signs.BC7017;
@@ -7,6 +12,7 @@ import com.github.sync667.CraftlandiaRails.Updaters.UpdaterFactory;
 import com.github.sync667.CraftlandiaRails.Util.LogUtil;
 import com.github.sync667.CraftlandiaRails.Wanderer.BCWandererManager;
 import com.github.sync667.CraftlandiaRails.plugins.BCDynmapPlugin;
+import com.github.sync667.CraftlandiaRailsAPI.Wanderer.Wanderer;
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
 import org.bukkit.command.Command;
@@ -16,13 +22,6 @@ import org.bukkit.entity.Player;
 import org.bukkit.entity.minecart.StorageMinecart;
 import org.bukkit.event.Listener;
 import org.bukkit.inventory.Inventory;
-
-import com.github.sync667.CraftlandiaRails.AddressLayer.AddressFactory;
-import com.github.sync667.CraftlandiaRails.AddressLayer.AddressRouted;
-import com.github.sync667.CraftlandiaRails.AddressLayer.AddressString;
-import com.github.sync667.CraftlandiaRails.EventManagement.ByteCartInventoryListener;
-import com.github.sync667.CraftlandiaRails.EventManagement.ByteCartUpdaterMoveListener;
-import com.github.catageek.ByteCartAPI.Wanderer.Wanderer;
 
 /**
  * The command executor

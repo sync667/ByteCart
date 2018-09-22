@@ -1,7 +1,7 @@
 package com.github.sync667.CraftlandiaRails.AddressLayer;
 
-import com.github.catageek.ByteCartAPI.ByteCartAPI;
-import com.github.catageek.ByteCartAPI.AddressLayer.Address;
+import com.github.sync667.CraftlandiaRailsAPI.AddressLayer.Address;
+import com.github.sync667.CraftlandiaRailsAPI.CraftlandiaRailsAPI;
 
 
 /**
@@ -28,7 +28,8 @@ abstract class AbstractAddress implements Address{
      */
     protected enum Offsets{
         // length (default : 6), pos (default : 0)
-        REGION(ByteCartAPI.MAXRINGLOG, 0), TRACK(ByteCartAPI.MAXRINGLOG, 0), STATION(ByteCartAPI.MAXSTATIONLOG, 0);
+        REGION(CraftlandiaRailsAPI.MAXRINGLOG, 0), TRACK(CraftlandiaRailsAPI.MAXRINGLOG, 0),
+        STATION(CraftlandiaRailsAPI.MAXSTATIONLOG, 0);
 
         private final int Length, Offset;
 

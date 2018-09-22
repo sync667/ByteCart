@@ -1,10 +1,9 @@
 package com.github.sync667.CraftlandiaRails.Routing;
 
+import com.github.sync667.CraftlandiaRailsAPI.HAL.RegistryBoth;
+import com.github.sync667.CraftlandiaRailsAPI.HAL.VirtualRegistry;
 import org.apache.commons.lang3.builder.CompareToBuilder;
 import org.apache.commons.lang3.builder.EqualsBuilder;
-
-import com.github.catageek.ByteCartAPI.HAL.RegistryBoth;
-import com.github.catageek.ByteCartAPI.HAL.VirtualRegistry;
 
 /**
  * A raw routing table entry, i.e a registry

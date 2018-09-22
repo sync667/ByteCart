@@ -1,9 +1,9 @@
 package com.github.sync667.CraftlandiaRails.AddressLayer;
 
 import com.github.sync667.CraftlandiaRails.CraftlandiaRails;
-import com.github.catageek.ByteCartAPI.AddressLayer.Address;
-import com.github.catageek.ByteCartAPI.AddressLayer.Resolver;
-import com.github.catageek.ByteCartAPI.HAL.VirtualRegistry;
+import com.github.sync667.CraftlandiaRailsAPI.AddressLayer.Address;
+import com.github.sync667.CraftlandiaRailsAPI.AddressLayer.Resolver;
+import com.github.sync667.CraftlandiaRailsAPI.HAL.VirtualRegistry;
 
 
 /**

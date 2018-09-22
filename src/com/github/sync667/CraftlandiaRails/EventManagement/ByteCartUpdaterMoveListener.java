@@ -1,6 +1,8 @@
 package com.github.sync667.CraftlandiaRails.EventManagement;
 
 import com.github.sync667.CraftlandiaRails.CraftlandiaRails;
+import com.github.sync667.CraftlandiaRailsAPI.Event.UpdaterMoveEvent;
+import com.github.sync667.CraftlandiaRailsAPI.Event.UpdaterRemoveEvent;
 import org.bukkit.Bukkit;
 import org.bukkit.Location;
 import org.bukkit.entity.Vehicle;
@@ -11,9 +13,6 @@ import org.bukkit.event.vehicle.VehicleDestroyEvent;
 import org.bukkit.event.vehicle.VehicleMoveEvent;
 import org.bukkit.inventory.Inventory;
 import org.bukkit.inventory.InventoryHolder;
-
-import com.github.catageek.ByteCartAPI.Event.UpdaterMoveEvent;
-import com.github.catageek.ByteCartAPI.Event.UpdaterRemoveEvent;
 
 /**
  * Launch an event when an updater moves This listener unregisters itself automatically if there is no updater

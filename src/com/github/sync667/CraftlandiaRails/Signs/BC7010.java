@@ -1,16 +1,15 @@
 package com.github.sync667.CraftlandiaRails.Signs;
 
+import com.github.sync667.CraftlandiaRails.AddressLayer.AddressFactory;
+import com.github.sync667.CraftlandiaRails.AddressLayer.AddressRouted;
+import com.github.sync667.CraftlandiaRails.AddressLayer.TicketFactory;
+import com.github.sync667.CraftlandiaRails.CraftlandiaRails;
+import com.github.sync667.CraftlandiaRails.IO.ComponentSign;
+import com.github.sync667.CraftlandiaRailsAPI.AddressLayer.Address;
 import org.bukkit.ChatColor;
 import org.bukkit.block.Block;
 import org.bukkit.entity.Player;
 import org.bukkit.inventory.InventoryHolder;
-
-import com.github.sync667.CraftlandiaRails.CraftlandiaRails;
-import com.github.sync667.CraftlandiaRails.AddressLayer.AddressFactory;
-import com.github.sync667.CraftlandiaRails.AddressLayer.AddressRouted;
-import com.github.sync667.CraftlandiaRails.AddressLayer.TicketFactory;
-import com.github.sync667.CraftlandiaRails.IO.ComponentSign;
-import com.github.catageek.ByteCartAPI.AddressLayer.Address;
 
 
 /**

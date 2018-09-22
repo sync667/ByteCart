@@ -1,14 +1,13 @@
 package com.github.sync667.CraftlandiaRails.Signs;
 
-import java.io.IOException;
-
 import com.github.sync667.CraftlandiaRails.Routing.RoutingTableFactory;
 import com.github.sync667.CraftlandiaRails.Routing.RoutingTableWritable;
+import com.github.sync667.CraftlandiaRailsAPI.Signs.BCRouter;
 import org.bukkit.block.BlockState;
 import org.bukkit.inventory.Inventory;
 import org.bukkit.inventory.InventoryHolder;
 
-import com.github.catageek.ByteCartAPI.Signs.BCRouter;
+import java.io.IOException;
 
 class BC8021 extends BC8020 implements BCRouter, Triggable, HasRoutingTable{
 

@@ -1,5 +1,6 @@
 package com.github.sync667.CraftlandiaRails.EventManagement;
 
+import com.github.sync667.CraftlandiaRailsAPI.Util.MathUtil;
 import org.bukkit.Location;
 import org.bukkit.World;
 import org.bukkit.entity.Entity;
@@ -10,8 +11,6 @@ import org.bukkit.event.Listener;
 import org.bukkit.event.vehicle.VehicleMoveEvent;
 import org.bukkit.event.world.ChunkUnloadEvent;
 import org.bukkit.util.Vector;
-
-import com.github.catageek.ByteCartAPI.Util.MathUtil;
 
 /**
  * Listener to load chunks around moving carts

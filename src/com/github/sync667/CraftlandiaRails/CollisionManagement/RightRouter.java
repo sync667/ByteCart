@@ -1,9 +1,8 @@
 package com.github.sync667.CraftlandiaRails.CollisionManagement;
 
+import com.github.sync667.CraftlandiaRailsAPI.Util.DirectionRegistry;
+import com.github.sync667.CraftlandiaRailsAPI.Util.MathUtil;
 import org.bukkit.block.BlockFace;
-
-import com.github.catageek.ByteCartAPI.Util.DirectionRegistry;
-import com.github.catageek.ByteCartAPI.Util.MathUtil;
 
 /**
  * A router where the cart turns right

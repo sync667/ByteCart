@@ -1,6 +1,6 @@
 package com.github.sync667.CraftlandiaRails.Signs;
 
-import com.github.catageek.ByteCartAPI.HAL.IC;
+import com.github.sync667.CraftlandiaRailsAPI.HAL.IC;
 
 /**
  * An IC that a player can right-click should implement this

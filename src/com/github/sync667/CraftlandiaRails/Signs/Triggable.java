@@ -1,10 +1,9 @@
 package com.github.sync667.CraftlandiaRails.Signs;
 
-import java.io.IOException;
-
+import com.github.sync667.CraftlandiaRailsAPI.HAL.IC;
 import org.bukkit.Location;
 
-import com.github.catageek.ByteCartAPI.HAL.IC;
+import java.io.IOException;
 
 /**
  * An IC that can be triggered by a cart should implement this

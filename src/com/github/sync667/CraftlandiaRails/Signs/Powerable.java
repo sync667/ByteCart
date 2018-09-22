@@ -1,8 +1,8 @@
 package com.github.sync667.CraftlandiaRails.Signs;
 
-import java.io.IOException;
+import com.github.sync667.CraftlandiaRailsAPI.HAL.IC;
 
-import com.github.catageek.ByteCartAPI.HAL.IC;
+import java.io.IOException;
 
 /**
  * An IC that can be powered should implement this

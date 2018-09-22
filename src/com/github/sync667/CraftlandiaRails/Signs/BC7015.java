@@ -1,13 +1,12 @@
 package com.github.sync667.CraftlandiaRails.Signs;
 
-import org.bukkit.ChatColor;
-import org.bukkit.entity.Player;
-
-import com.github.sync667.CraftlandiaRails.CraftlandiaRails;
 import com.github.sync667.CraftlandiaRails.AddressLayer.AddressFactory;
 import com.github.sync667.CraftlandiaRails.AddressLayer.AddressRouted;
 import com.github.sync667.CraftlandiaRails.AddressLayer.ReturnAddressFactory;
-import com.github.catageek.ByteCartAPI.AddressLayer.Address;
+import com.github.sync667.CraftlandiaRails.CraftlandiaRails;
+import com.github.sync667.CraftlandiaRailsAPI.AddressLayer.Address;
+import org.bukkit.ChatColor;
+import org.bukkit.entity.Player;
 
 /**
  * A return address setter

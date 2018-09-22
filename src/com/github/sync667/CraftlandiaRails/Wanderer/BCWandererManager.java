@@ -1,5 +1,19 @@
 package com.github.sync667.CraftlandiaRails.Wanderer;
 
+import com.github.sync667.CraftlandiaRails.CraftlandiaRails;
+import com.github.sync667.CraftlandiaRails.FileStorage.InventoryFile;
+import com.github.sync667.CraftlandiaRails.Util.LogUtil;
+import com.github.sync667.CraftlandiaRailsAPI.Wanderer.InventoryContent;
+import com.github.sync667.CraftlandiaRailsAPI.Wanderer.Wanderer.Level;
+import com.github.sync667.CraftlandiaRailsAPI.Wanderer.Wanderer.Scope;
+import com.github.sync667.CraftlandiaRailsAPI.Wanderer.WandererFactory;
+import com.github.sync667.CraftlandiaRailsAPI.Wanderer.WandererManager;
+import org.bukkit.Material;
+import org.bukkit.entity.Player;
+import org.bukkit.inventory.Inventory;
+import org.bukkit.inventory.ItemStack;
+import org.bukkit.inventory.meta.BookMeta;
+
 import java.io.IOException;
 import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
@@ -7,21 +21,6 @@ import java.util.Calendar;
 import java.util.Date;
 import java.util.HashMap;
 import java.util.Map;
-
-import com.github.sync667.CraftlandiaRails.FileStorage.InventoryFile;
-import org.bukkit.Material;
-import org.bukkit.entity.Player;
-import org.bukkit.inventory.Inventory;
-import org.bukkit.inventory.ItemStack;
-import org.bukkit.inventory.meta.BookMeta;
-
-import com.github.sync667.CraftlandiaRails.CraftlandiaRails;
-import com.github.sync667.CraftlandiaRails.Util.LogUtil;
-import com.github.catageek.ByteCartAPI.Wanderer.InventoryContent;
-import com.github.catageek.ByteCartAPI.Wanderer.Wanderer.Level;
-import com.github.catageek.ByteCartAPI.Wanderer.Wanderer.Scope;
-import com.github.catageek.ByteCartAPI.Wanderer.WandererFactory;
-import com.github.catageek.ByteCartAPI.Wanderer.WandererManager;
 
 public class BCWandererManager implements WandererManager{
 
@@ -145,7 +144,7 @@ public class BCWandererManager implements WandererManager{
     }
 
     /* (non-Javadoc)
-     * @see com.github.catageek.ByteCartAPI.Wanderer.WandererManager#isWandererType(java.lang.String)
+     * @see WandererManager#isWandererType(java.lang.String)
      */
     @Override
     public boolean isRegistered(String type) {
@@ -171,7 +170,7 @@ public class BCWandererManager implements WandererManager{
     }
 
     /* (non-Javadoc)
-     * @see com.github.catageek.ByteCartAPI.Wanderer.WandererManager#saveContent(com.github.catageek.ByteCartAPI.Wanderer.InventoryContent, java.lang.String, com.github.catageek.ByteCartAPI.Wanderer.Wanderer.Level)
+     * @see WandererManager#saveContent(InventoryContent, java.lang.String, Wanderer.Level)
      */
     @Override
     public void saveContent(InventoryContent rte, String suffix, Level level)

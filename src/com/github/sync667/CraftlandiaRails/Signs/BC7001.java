@@ -1,7 +1,12 @@
 package com.github.sync667.CraftlandiaRails.Signs;
 
-import java.io.IOException;
-
+import com.github.sync667.CraftlandiaRails.CraftlandiaRails;
+import com.github.sync667.CraftlandiaRails.HAL.PinRegistry;
+import com.github.sync667.CraftlandiaRails.IO.InputFactory;
+import com.github.sync667.CraftlandiaRails.IO.InputPin;
+import com.github.sync667.CraftlandiaRails.IO.OutputPin;
+import com.github.sync667.CraftlandiaRails.IO.OutputPinFactory;
+import com.github.sync667.CraftlandiaRailsAPI.Util.MathUtil;
 import org.bukkit.Location;
 import org.bukkit.block.BlockFace;
 import org.bukkit.entity.Minecart;
@@ -10,13 +15,7 @@ import org.bukkit.material.MaterialData;
 import org.bukkit.material.Rails;
 import org.bukkit.util.Vector;
 
-import com.github.sync667.CraftlandiaRails.CraftlandiaRails;
-import com.github.sync667.CraftlandiaRails.HAL.PinRegistry;
-import com.github.sync667.CraftlandiaRails.IO.InputFactory;
-import com.github.sync667.CraftlandiaRails.IO.InputPin;
-import com.github.sync667.CraftlandiaRails.IO.OutputPin;
-import com.github.sync667.CraftlandiaRails.IO.OutputPinFactory;
-import com.github.catageek.ByteCartAPI.Util.MathUtil;
+import java.io.IOException;
 
 /**
  * this IC represents a stop/start block it is commanded by a wire (like FalseBook 'station' block) wire on => start or

@@ -1,20 +1,19 @@
 package com.github.sync667.CraftlandiaRails.CollisionManagement;
 
-import java.util.Map;
-import java.util.Set;
-import java.util.concurrent.ConcurrentHashMap;
-
 import com.github.sync667.CraftlandiaRails.CraftlandiaRails;
 import com.github.sync667.CraftlandiaRails.HAL.PinRegistry;
 import com.github.sync667.CraftlandiaRails.IO.OutputPin;
 import com.github.sync667.CraftlandiaRails.IO.OutputPinFactory;
 import com.github.sync667.CraftlandiaRails.Signs.Triggable;
 import com.github.sync667.CraftlandiaRails.Storage.ExpirableMap;
+import com.github.sync667.CraftlandiaRailsAPI.HAL.RegistryOutput;
+import com.github.sync667.CraftlandiaRailsAPI.Util.MathUtil;
 import org.bukkit.Location;
 import org.bukkit.block.BlockFace;
 
-import com.github.catageek.ByteCartAPI.HAL.RegistryOutput;
-import com.github.catageek.ByteCartAPI.Util.MathUtil;
+import java.util.Map;
+import java.util.Set;
+import java.util.concurrent.ConcurrentHashMap;
 
 abstract class AbstractRouter extends AbstractCollisionAvoider implements Router{
 

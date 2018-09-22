@@ -1,22 +1,22 @@
 package com.github.sync667.CraftlandiaRails.Routing;
 
+import com.github.sync667.CraftlandiaRailsAPI.CraftlandiaRailsAPI;
+import com.github.sync667.CraftlandiaRailsAPI.Wanderer.RouteValue;
+
 import java.io.Externalizable;
 import java.io.IOException;
 import java.io.ObjectInput;
 import java.io.ObjectOutput;
 
-import com.github.catageek.ByteCartAPI.ByteCartAPI;
-import com.github.catageek.ByteCartAPI.Wanderer.RouteValue;
-
 
 /**
- * A track number on ByteCartAPI.MAXRINGLOG bits
+ * A track number on CraftlandiaRailsAPI.MAXRINGLOG bits
  */
 final class RouteNumber extends RoutingTableContent<RouteNumber>
         implements Comparable<RouteNumber>, Externalizable, RouteValue{
 
 
-    private static final int rlength = ByteCartAPI.MAXRINGLOG;
+    private static final int rlength = CraftlandiaRailsAPI.MAXRINGLOG;
     /**
      *
      */

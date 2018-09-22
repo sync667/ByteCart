@@ -1,16 +1,15 @@
 package com.github.sync667.CraftlandiaRails.Updaters;
 
-import java.util.Random;
-
+import com.github.sync667.CraftlandiaRails.CraftlandiaRails;
+import com.github.sync667.CraftlandiaRails.Util.LogUtil;
+import com.github.sync667.CraftlandiaRailsAPI.AddressLayer.Address;
+import com.github.sync667.CraftlandiaRailsAPI.Event.UpdaterSetRingEvent;
+import com.github.sync667.CraftlandiaRailsAPI.Signs.BCSign;
+import com.github.sync667.CraftlandiaRailsAPI.Wanderer.Wanderer;
 import org.bukkit.Bukkit;
 import org.bukkit.block.BlockFace;
 
-import com.github.sync667.CraftlandiaRails.CraftlandiaRails;
-import com.github.sync667.CraftlandiaRails.Util.LogUtil;
-import com.github.catageek.ByteCartAPI.AddressLayer.Address;
-import com.github.catageek.ByteCartAPI.Event.UpdaterSetRingEvent;
-import com.github.catageek.ByteCartAPI.Signs.BCSign;
-import com.github.catageek.ByteCartAPI.Wanderer.Wanderer;
+import java.util.Random;
 
 class UpdaterRegion extends AbstractRegionUpdater implements Wanderer{
 

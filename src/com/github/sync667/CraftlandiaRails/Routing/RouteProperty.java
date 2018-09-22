@@ -1,5 +1,8 @@
 package com.github.sync667.CraftlandiaRails.Routing;
 
+import com.github.sync667.CraftlandiaRails.Storage.PartitionedHashSet;
+import com.github.sync667.CraftlandiaRailsAPI.Util.DirectionRegistry;
+
 import java.io.Externalizable;
 import java.io.IOException;
 import java.io.ObjectInput;
@@ -7,9 +10,6 @@ import java.io.ObjectOutput;
 import java.util.Iterator;
 import java.util.Map.Entry;
 import java.util.TreeMap;
-
-import com.github.sync667.CraftlandiaRails.Storage.PartitionedHashSet;
-import com.github.catageek.ByteCartAPI.Util.DirectionRegistry;
 
 /**
  * The content of a routing table entry

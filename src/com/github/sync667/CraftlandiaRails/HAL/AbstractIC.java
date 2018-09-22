@@ -1,19 +1,18 @@
 package com.github.sync667.CraftlandiaRails.HAL;
 
-import java.util.Map;
-import java.util.WeakHashMap;
-
+import com.github.sync667.CraftlandiaRails.CraftlandiaRails;
+import com.github.sync667.CraftlandiaRails.IO.ComponentSign;
+import com.github.sync667.CraftlandiaRailsAPI.HAL.IC;
+import com.github.sync667.CraftlandiaRailsAPI.HAL.RegistryInput;
+import com.github.sync667.CraftlandiaRailsAPI.HAL.RegistryOutput;
+import com.github.sync667.CraftlandiaRailsAPI.Util.MathUtil;
 import org.bukkit.Material;
 import org.bukkit.block.Block;
 import org.bukkit.block.BlockFace;
 import org.bukkit.block.Sign;
 
-import com.github.sync667.CraftlandiaRails.CraftlandiaRails;
-import com.github.sync667.CraftlandiaRails.IO.ComponentSign;
-import com.github.catageek.ByteCartAPI.HAL.IC;
-import com.github.catageek.ByteCartAPI.HAL.RegistryInput;
-import com.github.catageek.ByteCartAPI.HAL.RegistryOutput;
-import com.github.catageek.ByteCartAPI.Util.MathUtil;
+import java.util.Map;
+import java.util.WeakHashMap;
 
 
 // All ICs must inherit from this class

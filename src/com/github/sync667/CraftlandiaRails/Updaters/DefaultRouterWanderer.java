@@ -1,10 +1,9 @@
 package com.github.sync667.CraftlandiaRails.Updaters;
 
 
+import com.github.sync667.CraftlandiaRailsAPI.CollisionManagement.IntersectionSide.Side;
+import com.github.sync667.CraftlandiaRailsAPI.Signs.BCSign;
 import org.bukkit.block.BlockFace;
-
-import com.github.catageek.ByteCartAPI.CollisionManagement.IntersectionSide.Side;
-import com.github.catageek.ByteCartAPI.Signs.BCSign;
 
 /**
  * This class implements a wanderer that will run through all routers randomly, without going to branches.

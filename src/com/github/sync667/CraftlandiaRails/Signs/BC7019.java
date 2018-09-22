@@ -3,13 +3,13 @@
  */
 package com.github.sync667.CraftlandiaRails.Signs;
 
-import java.util.Random;
-
 import com.github.sync667.CraftlandiaRails.AddressLayer.AddressFactory;
 import com.github.sync667.CraftlandiaRails.AddressLayer.AddressString;
-import com.github.catageek.ByteCartAPI.AddressLayer.Address;
-import com.github.catageek.ByteCartAPI.HAL.RegistryBoth;
-import com.github.catageek.ByteCartAPI.HAL.RegistryInput;
+import com.github.sync667.CraftlandiaRailsAPI.AddressLayer.Address;
+import com.github.sync667.CraftlandiaRailsAPI.HAL.RegistryBoth;
+import com.github.sync667.CraftlandiaRailsAPI.HAL.RegistryInput;
+
+import java.util.Random;
 
 /**
  * Gives random address to a cart

@@ -1,14 +1,13 @@
 package com.github.sync667.CraftlandiaRails.Routing;
 
+import com.github.sync667.CraftlandiaRails.CraftlandiaRails;
+import com.github.sync667.CraftlandiaRails.Updaters.UpdaterContent;
+import com.github.sync667.CraftlandiaRailsAPI.Wanderer.RoutingTable;
+import org.bukkit.block.BlockFace;
+
 import java.io.IOException;
 import java.util.Iterator;
 import java.util.Map;
-
-import com.github.sync667.CraftlandiaRails.Updaters.UpdaterContent;
-import org.bukkit.block.BlockFace;
-
-import com.github.sync667.CraftlandiaRails.CraftlandiaRails;
-import com.github.catageek.ByteCartAPI.Wanderer.RoutingTable;
 
 
 /**
